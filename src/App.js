@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Nav from "./components/Nav";
+import Timer from "./components/Timer";
+import Footer from "./components/Footer";
+
+/* 
+  Props para cambiar el color de los botones
+  State para cambiar el numero del contador
+  Al darle click a BtnIncrease debe aumentar el contador por 1
+  Al darle click a BtnDecrease debe disminuir el contador por 1
+*/
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Nav />
+      <Timer />
+      <Footer />
     </div>
   );
 }
