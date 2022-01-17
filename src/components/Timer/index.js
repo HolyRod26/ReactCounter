@@ -1,7 +1,6 @@
 import React from "react";
-import GeneralBtn from "../GeneralBtn";
-// import BtnDecrease from "../BtnDecrease";
-// import BtnIncrease from "../BtnIncrease";
+import OptionsCounter from "../OptionsCounter";
+// on click will be a handleStart function for the button on timer
 
 class Timer extends React.Component {
   constructor(props) {
@@ -27,10 +26,11 @@ class Timer extends React.Component {
           minHeight: "80vh",
           fontFamily: "Chakra Petch",
           fontSize: "4rem",
+          boxShadow: "3 3 6 1 rgba(162,255,23,0.6)",
         }}
       >
         <p>{countdown}</p>
-        <GeneralBtn content="Iniciar" />
+        <OptionsCounter />
       </div>
     );
   }

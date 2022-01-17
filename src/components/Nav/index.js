@@ -22,7 +22,7 @@ class Nav extends React.Component {
             letterSpacing: 2,
             color: "white",
             backgroundColor: "transparent",
-            border: "1px solid #FFA901",
+            border: "1px solid #0F3AA8",
             borderRadius: "1rem",
             fontWeight: 700,
           }}

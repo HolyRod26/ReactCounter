@@ -1,16 +1,18 @@
 import React from "react";
-import BtnDecrease from "../BtnDecrease";
+import StartBtn from "../StartBtn";
 import BtnIncrease from "../BtnIncrease";
+import BtnDecrease from "../BtnDecrease";
 
-class Footer extends React.Component {
+class OptionsCounter extends React.Component {
   render() {
     return (
       <div style={{ display: "flex", justifyContent: "center", gap: "5rem" }}>
         <BtnIncrease />
         <BtnDecrease />
+        <StartBtn />
       </div>
     );
   }
 }
 
-export default Footer;
+export default OptionsCounter;

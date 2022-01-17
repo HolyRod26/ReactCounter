@@ -1,7 +1,6 @@
 import "./App.css";
 import Nav from "./components/Nav";
 import Timer from "./components/Timer";
-import Footer from "./components/Footer";
 
 /* 
   Props para cambiar el color de los botones
@@ -15,7 +14,6 @@ function App() {
     <div className="App">
       <Nav />
       <Timer />
-      <Footer />
     </div>
   );
 }
