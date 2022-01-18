@@ -3,37 +3,27 @@ import React from "react";
 class Button extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      isCounting: true,
-    };
-    this.handleStart = this.handleStart.bind(this);
-  }
-
-  // To start the countdown of the timer
-  // Currently it only updates the description
-  handleStart() {
-    this.setState((prevState) => ({
-      isCounting: !prevState.isCounting,
-    }));
   }
 
   render() {
+    const bgColor = this.props.bgColor;
     return (
       <button
         style={{
           padding: "1rem 2.5rem",
+          margin: "1rem 0",
           fontSize: "1rem",
           textTransform: "uppercase",
           letterSpacing: 2,
           color: "white",
-          backgroundColor: "transparent",
+          backgroundColor: bgColor,
           border: "1px solid #0F3AA8",
           borderRadius: "1rem",
           fontWeight: 700,
         }}
-        onClick={this.handleStart}
+        onClick={() => this.props.onClick()}
       >
-        {this.state.isCounting ? "Go" : "Stop"}
+        {this.props.label}
       </button>
     );
   }

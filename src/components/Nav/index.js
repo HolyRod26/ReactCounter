@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "../Button";
 
 class Nav extends React.Component {
   render() {
@@ -8,27 +9,13 @@ class Nav extends React.Component {
         style={{
           display: "flex",
           margin: "1rem 0",
+          justifyContent: "space-around",
         }}
       >
         <h1 style={{ fontFamily: "Chakra Petch", marginLeft: "2rem" }}>
           Contador en React
         </h1>
-        <button
-          style={{
-            padding: "1rem 2rem",
-            fontSize: "1rem",
-            margin: "0 2rem 0 auto",
-            textTransform: "uppercase",
-            letterSpacing: 2,
-            color: "white",
-            backgroundColor: "transparent",
-            border: "1px solid #0F3AA8",
-            borderRadius: "1rem",
-            fontWeight: 700,
-          }}
-        >
-          Restart
-        </button>
+        <Button label="Log out" bgColor="transparent" />
       </div>
     );
   }
