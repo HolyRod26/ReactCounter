@@ -1,15 +1,21 @@
 import React from "react";
 
-class StartBtn extends React.Component {
+class Button extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      message: "start",
+      isCounting: true,
     };
+    this.handleStart = this.handleStart.bind(this);
   }
-  //handleStart() {
-  //  this.setState((state, props));
-  //}
+
+  // To start the countdown of the timer
+  // Currently it only updates the description
+  handleStart() {
+    this.setState((prevState) => ({
+      isCounting: !prevState.isCounting,
+    }));
+  }
 
   render() {
     return (
@@ -25,11 +31,12 @@ class StartBtn extends React.Component {
           borderRadius: "1rem",
           fontWeight: 700,
         }}
+        onClick={this.handleStart}
       >
-        {this.state.message}
+        {this.state.isCounting ? "Go" : "Stop"}
       </button>
     );
   }
 }
 
-export default StartBtn;
+export default Button;

@@ -7,7 +7,7 @@ class BtnIncrease extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      counter: 0,
+      counter: this.props.currentCountdown,
     };
     this.handleIncrement = this.handleIncrement.bind(this);
   }
